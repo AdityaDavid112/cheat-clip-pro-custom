@@ -3,15 +3,14 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/cheat-clip-pro-custom/',
-  plugins: [react()],
-  server: {
+ base: '/cheat-clip-pro-custom/',
   plugins: [react()],
   server: {
     watch: {
       ignored: ['**/dist_app/**', '**/dist_installer/**', '**/build/**', '**/venv/**']
     },
     proxy: {
+
       '/api': {
         target: 'http://127.0.0.1:8000',
         changeOrigin: true,
